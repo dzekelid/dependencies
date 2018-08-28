@@ -1,11 +1,14 @@
+---
 swagger: "2.0"
 x-collection-name: Predix
-x-complete: 1
+x-complete: 0
 info:
-  title: VIEWS
+  title: Predix Insights Post Dependencies Undeploy
+  description: Post dependencies undeploy.
+  termsOfService: urn:tos
   version: 1.0.0
-host: thetaray-anomaly-service.run.aws-usw02-pr.ice.predix.io
-basePath: /v1
+host: insights-api.data-services.predix.io
+basePath: /api/v1
 schemes:
 - http
 produces:
@@ -105,66 +108,17 @@ paths:
       tags:
       - Dependencies
       - Undeploy
-  /dependencies/undeploy/{dependencyId}:
-    post:
-      summary: Post Dependencies Undeploy Dependencyid
-      description: Post dependencies undeploy dependencyid.
-      operationId: undeployDependencyUsingPOST
-      x-api-path-slug: dependenciesundeploydependencyid-post
-      parameters:
-      - in: path
-        name: dependencyId
-        description: dependencyId
-      responses:
-        200:
-          description: Successful response
-      tags:
-      - Dependencies
-      - Undeploy
-      - Dependencyid
-  /dependencies/{dependencyId}:
-    get:
-      summary: Get Dependencies Dependencyid
-      description: Get dependencies dependencyid.
-      operationId: getDependencyUsingGET
-      x-api-path-slug: dependenciesdependencyid-get
-      parameters:
-      - in: path
-        name: dependencyId
-        description: dependencyId
-      responses:
-        200:
-          description: Successful response
-      tags:
-      - Dependencies
-      - Dependencyid
-    post:
-      summary: Post Dependencies Dependencyid
-      description: Post dependencies dependencyid.
-      operationId: updateDependencyUsingPOST
-      x-api-path-slug: dependenciesdependencyid-post
-      parameters:
-      - in: path
-        name: dependencyId
-        description: dependencyId
-      responses:
-        200:
-          description: Successful response
-      tags:
-      - Dependencies
-      - Dependencyid
-    delete:
-      summary: Delete Dependencies Dependencyid
-      description: Delete dependencies dependencyid.
-      operationId: deleteDependencyUsingDELETE
-      x-api-path-slug: dependenciesdependencyid-delete
-      parameters:
-      - in: path
-        name: dependencyId
-        description: dependencyId
-      responses:
-        200:
-          description: Successful response
-      tags:
-      - Dependencies
-      - Dependencyid
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
